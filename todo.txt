@@ -1,0 +1,3 @@
+switch to vertical for responsive
+
+place only in top, bottom, right, or left

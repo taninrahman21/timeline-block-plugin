@@ -1,0 +1,21 @@
+$primaryColor: #4527a4;
+
+.tlgbNowEditing {
+	outline: 2px solid $primaryColor;
+	box-shadow: 0 0 20px 0 $primaryColor;
+
+	.tlgbDescriptionArea {
+		.tlgbDescriptionInspector {
+			display: block !important;
+		}
+	}
+}
+
+.tlgbInspectorInfo {
+	padding: 6px;
+
+	a {
+		text-decoration: none;
+		font-weight: bold;
+	}
+}
