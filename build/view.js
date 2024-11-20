@@ -362,7 +362,11 @@ const Timeline = ({
       id: `tlgbTimelineItem-${index}`
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "timeline__content"
-    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", null, label), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, description)));
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+      dangerouslySetInnerHTML: {
+        __html: label.replace(/\n/g, '<br />')
+      }
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, description)));
   }))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Timeline);

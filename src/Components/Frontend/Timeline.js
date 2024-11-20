@@ -23,7 +23,7 @@ const Timeline = ({ attributes }) => {
             return (
               <div key={index} className='timeline__item fadeIn' id={`tlgbTimelineItem-${index}`}>
                 <div className='timeline__content'>
-                  <label>{label}</label>
+                  <label dangerouslySetInnerHTML={{ __html: label.replace(/\n/g, '<br />') }}></label>
                   <p>{description}</p>
                 </div>
               </div>
