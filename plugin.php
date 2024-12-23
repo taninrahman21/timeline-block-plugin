@@ -69,7 +69,7 @@ if (function_exists('tb_fs')) {
             'support' => false,
             'parent' => array(
               'slug' => 'tools.php',
-              'first-slug' => ''
+              'first-slug' => 'tools.php?page=timeline-block#/dashboard'
             ),
           )
         ];
