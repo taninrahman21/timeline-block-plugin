@@ -118,18 +118,22 @@ const Styles = ({ attributes, setAttributes }) => {
 
         <ColorControl label={__('Label Color:', 'timeline-block')} value={labelColor} onChange={val => setAttributes({ labelColor: val })} defaultColor='#222222' />
 
-        <Typography
-          className='mt20'
-          label={__('Date Typography:', 'timeline-block')}
-          value={dateStyles.dateTypo}
-          onChange={val => setAttributes({ dateStyles: updateData(dateStyles, val, "dateTypo") })}
-          defaults={{ fontSize: { desktop: 16, tablet: 16, mobile: 16 } }} />
+        {
+          theme === "theme-2" && <>
+            <Typography
+              className='mt20'
+              label={__('Date Typography:', 'timeline-block')}
+              value={dateStyles.dateTypo}
+              onChange={val => setAttributes({ dateStyles: updateData(dateStyles, val, "dateTypo") })}
+              defaults={{ fontSize: { desktop: 16, tablet: 16, mobile: 16 } }} />
 
-        <ColorControl
-          label={__('Date Color:', 'timeline-block')}
-          value={dateStyles.dateColor}
-          onChange={val => setAttributes({ dateStyles: updateData(dateStyles, val, "dateColor") })}
-          defaultColor='#222222' />
+            <ColorControl
+              label={__('Date Color:', 'timeline-block')}
+              value={dateStyles.dateColor}
+              onChange={val => setAttributes({ dateStyles: updateData(dateStyles, val, "dateColor") })}
+              defaultColor='#222222' />
+          </>
+        }
 
         <Typography className='mt20' label={__('Description Typography:', 'timeline-block')} value={itemTypo} onChange={val => setAttributes({ itemTypo: val })} defaults={{ fontSize: { desktop: 14, tablet: 14, mobile: 14 } }} />
 

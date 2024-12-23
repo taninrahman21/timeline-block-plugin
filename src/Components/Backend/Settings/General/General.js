@@ -20,15 +20,6 @@ const General = ({ attributes, setAttributes, removeTimeline, activeIndex, addTi
   return (
     <>
       <PanelBody className='bPlPanelBody addRemoveItems' title={__('Add or Remove timelines', 'timeline-block')}>
-        {/* <SelectControl
-          label={__('Themes', 'timeline-block')}
-          labelPosition='left'
-          value={theme}
-          options={themeOptions}
-          onChange={value => {
-            setAttributes({ theme: value, type: 'vertical' })
-          }}
-        /> */}
         <SelectControlPro
           label={__("Theme:", "timeline-block")}
           labelPosition='left'
