@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "default",
+    "theme": "<!-- wp:tlgb/b-timeline-block {\"itemPosition\":\"both-side\",\"labelLocation\":\"top\",\"horizontalDatePosition\":\"top\"} /-->"
+  },
+  {
+    "id": 2,
+    "name": "Theme 1",
+    "theme": "<!-- wp:tlgb/b-timeline-block {\"itemPosition\":\"both-side\",\"labelLocation\":\"top\",\"horizontalDatePosition\":\"top\",\"theme\":\"timeline-with-accordion\"} /-->"
+  },
+  {
+    "id": 3,
+    "name": "Theme 2",
+    "theme": "<!-- wp:tlgb/b-timeline-block {\"itemPosition\":\"both-side\",\"theme\":\"theme-2\"} /-->"
+  }
+]

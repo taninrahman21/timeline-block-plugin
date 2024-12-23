@@ -1,22 +1,35 @@
+import { BlockControls, InspectorControls } from '@wordpress/block-editor';
+import { TabPanel, ToolbarButton, ToolbarGroup } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
-import { InspectorControls, BlockControls } from '@wordpress/block-editor';
-import { TabPanel, ToolbarGroup, ToolbarButton } from '@wordpress/components';
+import { useState } from "react";
 
 // Settings Components
 import { tabController } from '../../../../../Components/utils/functions';
 
+import { BBlocksAds } from '../../../../../bpl-tools/Components';
+import { AboutProModal } from '../../../../../bpl-tools/ProControls';
 import { generalStyleTabs } from '../../../utils/options';
-import Styles from './Styles/Styles';
 import General from './General/General';
+import Styles from './Styles/Styles';
 
-const Settings = ({ attributes, setAttributes, activeIndex, setActiveIndex, updateTimeline }) => {
+const Settings = ({ attributes, setAttributes, activeIndex, setActiveIndex, updateTimeline, isPremium }) => {
   const { timelines } = attributes;
+  const [isProModalOpen, setIsProModalOpen] = useState(false);
+
+
+
+  const premiumProps = {
+    isPremium,
+    setIsProModalOpen
+  }
+
 
   const addTimeline = () => {
     setAttributes({
       timelines: [
         ...timelines,
         {
+          date: "02-02-2002",
           label: 'January',
           description: 'Note of the january month'
         }
@@ -40,12 +53,12 @@ const Settings = ({ attributes, setAttributes, activeIndex, setActiveIndex, upda
 
   return <>
     <InspectorControls>
-      <div className='bBlocksInspectorInfo'>
-        Need more block like this? Checkout the bundle ➡ <a href='https://wordpress.org/plugins/b-blocks' target='_blank' rel='noopener noreferrer'>B Blocks</a>
-      </div>
+      {
+        !isPremium && <BBlocksAds />
+      }
 
       <TabPanel className='bPlTabPanel' activeClass='activeTab' tabs={generalStyleTabs} onSelect={tabController}>{tab => <>
-        {'general' === tab.name && <General attributes={attributes} setAttributes={setAttributes} addTimeline={addTimeline} duplicateTimeline={addTimeline} updateTimeline={updateTimeline} removeTimeline={removeTimeline} activeIndex={activeIndex} />}
+        {'general' === tab.name && <General attributes={attributes} setAttributes={setAttributes} addTimeline={addTimeline} duplicateTimeline={addTimeline} updateTimeline={updateTimeline} removeTimeline={removeTimeline} activeIndex={activeIndex} premiumProps={premiumProps} />}
 
 
         {'style' === tab.name && <Styles attributes={attributes} setAttributes={setAttributes} />}
@@ -64,6 +77,21 @@ const Settings = ({ attributes, setAttributes, activeIndex, setActiveIndex, upda
         <ToolbarButton icon='plus' label={__('Add Timeline', 'timeline-block')} onClick={addTimeline} />
       </ToolbarGroup>
     </BlockControls>
+
+    <AboutProModal isProModalOpen={isProModalOpen} setIsProModalOpen={setIsProModalOpen} link='https://bplugins.com/products/advance-custom-html/#pricing'>
+      <li>&emsp;<strong>{__('Embed The Code: ', 'custom-html')}</strong>{__('Embed the code to frontend.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Set Editor Height and Width: ', 'custom-html')}</strong>{__('By adding this feature you can customize height and width of the editor.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Edit Tab Size: ', 'custom-html')}</strong>{__('Increase tab size.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Change Editor Theme: ', 'custom-html')}</strong>{__('There have 45 themes that you can change.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Different language for syntax: ', 'custom-html')}</strong>{__('Change language for different language syntax.', 'custom - html')}</li>
+      <li>&emsp;<strong>{__('Display Heading: ', 'custom-html')}</strong>{__('Display heading and edit this a very beautiful way.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Display copy button: ', 'custom-html')}</strong>{__('Display copy button for copy the code by one click and set position and you change its type like text of icon and style this.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Line numbers: ', 'custom-html')}</strong>{__('Show/hide line numbers with your need.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Highlight active line: ', 'custom-html')}</strong>{__('Show/hide highlight active line.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Fold Gutter: ', 'custom-html')}</strong>{__('Enable/disable fold gutter option.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Enable Autocompletion: ', 'custom-html')}</strong>{__('Off/on autocompletion.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Wrap Enabled: ', 'custom-html')}</strong>{__('Enable wrap system.', 'custom-html')}</li>
+    </AboutProModal>
   </>;
 };
 export default Settings;

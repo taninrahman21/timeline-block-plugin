@@ -1,0 +1,505 @@
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/admin/help.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+#bplAdminHelpPage {
+  width: 100%;
+}
+#bplAdminHelpPage .bplContainer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: -15px;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container {
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .dashboard-heading {
+  display: flex;
+  flex-shrink: unset;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 14px;
+  width: 1090px;
+  margin: 0 auto;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .dashboard-heading .heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .dashboard-heading .heading .block-logo {
+  width: 50px;
+  display: block;
+  height: 50px;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .dashboard-heading .heading .heading-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #1f2937;
+  margin-top: 18px;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .dashboard-heading .plugin-version {
+  background-color: #e4e6eb;
+  padding: 6px 14px;
+  border-radius: 5px;
+  color: #6b7280;
+  font-weight: bold;
+  font-size: 14px;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks {
+  width: 1090px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px auto;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .firstLinks {
+  display: flex;
+  font-size: 1rem;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .firstLinks .links {
+  margin-right: 35px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  color: #6b7280;
+  border: none;
+  outline: none;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .firstLinks .links:hover {
+  border-bottom: 2px solid #1f2a38;
+  color: black;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .firstLinks .links.active {
+  border-bottom: 2px solid #1f2a38;
+  color: black;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .firstLinks .links:focus {
+  box-shadow: none;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .secondLinksDiv {
+  padding-bottom: 20px;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .secondLinksDiv .secondLinks {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #6b7280;
+  display: inline-flex;
+  align-items: center;
+  outline: none;
+  border: none;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .secondLinksDiv .secondLinks svg {
+  margin-right: 5px;
+  font-size: 20px;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .secondLinksDiv .secondLinks:hover {
+  color: black;
+}
+#bplAdminHelpPage .bplContainer .dashboard-heading-container .navLinks .secondLinksDiv .secondLinks:focus {
+  box-shadow: none;
+}
+#bplAdminHelpPage .bplContainer .feature-section {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 1090px;
+  margin: 40px auto;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 30px;
+  width: 100%;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid {
+  margin: 0 auto;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid .feature-content {
+  padding-right: 2rem;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid .feature-content .section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  color: #4a5568;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid .feature-content .section-heading {
+  margin-top: 0.5rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #1a202c;
+  text-align: left;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid .feature-content .section-description {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1rem;
+  color: #4a5568;
+  text-align: left;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid .feature-content .feature-list {
+  margin-top: 3rem;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 15px;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid .feature-content .feature-list .feature-item {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: left;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid .feature-content .feature-list .feature-item .feature-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a202c;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid .feature-content .feature-list .feature-item .feature-description {
+  margin-top: 10px;
+}
+#bplAdminHelpPage .bplContainer .feature-section .feature-container .feature-grid .feature-content .upgrade-btn {
+  display: flex;
+  justify-content: center;
+}
+#bplAdminHelpPage .bplContainer .support-section {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 1090px;
+  margin: 40px auto;
+  text-align: center;
+}
+#bplAdminHelpPage .bplContainer .support-section .header {
+  width: 1090px;
+  margin: 20px auto;
+}
+#bplAdminHelpPage .bplContainer .support-section .header .heading {
+  color: #1d2327;
+  font-size: 26px;
+  margin: 0;
+  padding: 30px;
+}
+#bplAdminHelpPage .bplContainer .support-section .box {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+#bplAdminHelpPage .bplContainer .support-section .features {
+  width: 1090px;
+  display: grid;
+  grid-gap: 30px 30px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#bplAdminHelpPage .bplContainer .support-section .features.col-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 768px) {
+  #bplAdminHelpPage .bplContainer .support-section .features.col-tab-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  #bplAdminHelpPage .bplContainer .support-section .features.col-mob-1 {
+    grid-template-columns: 1fr;
+  }
+}
+#bplAdminHelpPage .bplContainer .support-section .features .feature {
+  text-align: center;
+  padding: 20px;
+}
+#bplAdminHelpPage .bplContainer .support-section .features .feature i {
+  font-size: 30px;
+  color: #4527a4;
+}
+#bplAdminHelpPage .bplContainer .support-section .features .feature h3 {
+  font-size: 17px;
+  color: #1d2327;
+  margin: 17px 0 10px 0;
+}
+#bplAdminHelpPage .bplContainer .support-section .features .feature p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 13px 0;
+}
+#bplAdminHelpPage .bplContainer .support-section .features .feature a {
+  background-color: #3858e9;
+  border-color: #3858e9;
+}
+
+#wpcontent {
+  padding-left: 0px !important;
+}
+
+.tab-section {
+  padding: 20px;
+}
+.tab-section .dashboard-header-main-section {
+  display: flex;
+  align-items: center;
+  gap: 139px;
+}
+.tab-section .dashboard-header-main-section .dashboard-header-section {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.tab-section .dashboard-header-main-section .dashboard-header-section .blockName {
+  font-weight: 700;
+  color: #4527a4;
+}
+.tab-section .dashboard-header-main-section .dashboard-header-section .premium-head {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.tab-section .dashboard-header-main-section .dashboard-header-section .premium-head .leftDownIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.tab-container {
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.tab-container .ul-head {
+  text-align: left;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+.tab-container .tabs {
+  width: 200px;
+  background-color: white;
+  border-right: 1px solid #e0e0e0;
+}
+.tab-container .tabs .tab-list {
+  list-style: none;
+}
+.tab-container .tabs .tab-list .tab-item {
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.tab-container .tabs .tab-list .tab-item:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.tab-container .tabs .tab-list .tab-item.active {
+  color: #0ea5e9;
+  position: relative;
+}
+.tab-container .tabs .tab-list .tab-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #0ea5e9;
+}
+.tab-container .tabs .tab-list .tab-item .tab-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tab-container .tabs .tab-list .tab-item .tab-content .tab-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+.tab-container .tabs .tab-list .tab-item .tab-content .pro-badge {
+  background-color: #4527a4;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 2px 8px;
+  margin-left: 8px;
+  text-transform: uppercase;
+}
+.tab-container .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 30px;
+  /* Display Modal */
+}
+.tab-container .content .theme-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.tab-container .content .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+.tab-container .content .modal-overlay .modal-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%;
+  height: 70%;
+  overflow-y: auto;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  transition: all 1s linear;
+  /* Close button */
+}
+.tab-container .content .modal-overlay .modal-content:hover {
+  background-position: bottom center;
+}
+.tab-container .content .modal-overlay .modal-content .close-button {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+  z-index: 999999;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/admin/Pages/UpgradeBtn.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/* Button base styles */
+.premium-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 19px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  background: linear-gradient(135deg, #9333ea, #3b82f6);
+  transition: transform 0.3s ease-out;
+  margin-top: 25px;
+}
+
+.premium-button:hover {
+  transform: scale(1.05);
+}
+
+.premium-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.3);
+}
+
+/* Background effects */
+.button-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #7e22ce, #2563eb);
+  transform: translateX(0) skewX(-12deg);
+  transition: transform 0.3s ease-out;
+  opacity: 0.4;
+}
+
+.premium-button:hover .button-background {
+  transform: translateX(0) skewX(12deg);
+}
+
+/* Shine effect */
+.button-shine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 33%;
+  background: linear-gradient(90deg, rgba(147, 51, 234, 0.2), rgba(59, 130, 246, 0.2));
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.premium-button:hover .button-shine {
+  transform: translateX(100%);
+}
+
+/* Overlay gradients */
+.button-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #9333ea, #3b82f6);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.premium-button:hover .button-overlay {
+  opacity: 0.5;
+}
+
+/* Glow effect */
+.button-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(59, 130, 246, 0.3));
+  mix-blend-mode: overlay;
+}
+
+/* Content styles */
+.button-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+
+/* Icon animation */
+.sparkle-icon {
+  width: 25px;
+  height: 25px;
+  animation: pulse 2s infinite;
+  color: #f7f7f7;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+}
+
+/*# sourceMappingURL=admin-help.css.map*/

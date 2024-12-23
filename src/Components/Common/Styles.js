@@ -1,31 +1,50 @@
 import React from 'react';
 import { getTypoCSS } from '../../../../Components/utils/getCSS';
 
-const Styles = ({ attributes, id}) => {
-  const { barBackground, barDotColor, itemBg, itemColor, itemTypo, itemBorder, labelTypo, labelColor } = attributes;
+const Styles = ({ attributes, id }) => {
+	const { barBackground, barDotColor, itemBg, itemColor, itemTypo, itemBorder, labelTypo, labelColor, theme } = attributes;
 
-  const contentCl = '.timeline__content';
-  const mainSl = `#${id}`;
-  const timelineSl = `${mainSl} .timeline`;
-  const contentSl = `${timelineSl} ${contentCl}`;
-  const itemSl = `${mainSl} .timeline__item`;
+	const contentCl = '.timeline__content';
+	const mainSl = `#${id}`;
+	const timelineSl = `${mainSl} .timeline`;
+	const contentSl = `${timelineSl} ${contentCl}`;
+	const itemSl = `${mainSl} .timeline__item`;
 
-  return <style dangerouslySetInnerHTML={{
-    __html: `
+
+	return <style dangerouslySetInnerHTML={{
+		__html: `
+		${getTypoCSS("", labelTypo)?.googleFontLink}
 		${getTypoCSS(`${contentSl} label`, labelTypo, false).styles}
-		${getTypoCSS(`${contentSl} p`, itemTypo, false).styles}
+		${getTypoCSS("", itemTypo)?.googleFontLink}
+		${getTypoCSS(`${contentSl} p`, itemTypo).styles}
 
 		${contentSl}{
 			background: ${itemBg};
 			border: ${itemBorder.width} solid ${itemBorder.color};
+			${theme === 'timeline-with-accordion' ? 'border-radius: 0;' : 'border-radius: 10px;'}
+			${theme === 'timeline-with-accordion' ? 'padding: 1rem;' : 'padding: 1.25rem;'}
 		}
 		${contentSl} label{
 			color: ${labelColor};
+			display: block;
+			margin-bottom: 0;
 		}
 		${contentSl} p{
 			color: ${itemColor};
 		}
+		${contentSl} .timeline__description {
+			display: none;
+			overflow: hidden;
+			transition: max-height 0.3s ease-in-out;
+		}
+		${contentSl} .timeline__description.visible {
+		  display: block;
+			transition: max-height 0.4s ease-in-out;
+		}
 
+		${itemSl} {
+		  ${theme === 'timeline-with-accordion' ? 'width: 100%;' : 'width: 50%'}
+		}
 		${itemSl}::after {
 			background-color: ${itemBg};
 			border: 5px solid ${barDotColor};
@@ -33,19 +52,20 @@ const Styles = ({ attributes, id}) => {
 		${timelineSl}--horizontal .timeline-divider, 
 		${timelineSl}:not(.timeline--horizontal)::before {
 			background-color: ${barBackground};
+			${theme === 'timeline-with-accordion' && 'left: 0;'}
 		}
 
 		${itemSl}.timeline__item--left ${contentCl}::before {
 			border-left: 11px solid ${itemBorder.color}}
 
 		${itemSl}.timeline__item--right ${contentCl}::before {
-				border-right: 12px solid ${itemBorder.color};
+			border-right: 12px solid ${itemBorder.color};
 		}
 		${itemSl}.timeline__item--left ${contentCl}::after {
-		border-left: 11px solid ${itemBg};}
-
-		${itemSl}.timeline__item--right ${contentCl}::after {
-			border-right: 12px solid ${itemBg};
+		  border-left: 11px solid ${itemBg};
+		}
+		${itemSl}.timeline__item--right {
+			${theme === 'timeline-with-accordion' ? 'left: 0;' : 'left: 50%'}
 		}
 
 		${itemSl}.timeline__item--top ${contentCl}::before {
@@ -71,12 +91,15 @@ const Styles = ({ attributes, id}) => {
 			border-left: none;
 			border-right: 12px solid ${itemBg};
 		}
-
 		${timelineSl}-nav-button {
 			background-color: #fff;
 			border: 2px solid ${barBackground};
 		}
+		${timelineSl} .timeline__wrap {
+		  	${theme === 'timeline-with-accordion' ? 'overflow: unset;' : 'overflow: hidden;'}
+		}
+		
 		`.replace(/\s+/g, ' ')
-  }} />
+	}} />
 }
 export default Styles;

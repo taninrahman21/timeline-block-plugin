@@ -1,8 +1,7 @@
 import { createRoot } from 'react-dom/client';
 
-import './style.scss';
-import Styles from './Components/Common/Styles';
 import Timeline from './Components/Frontend/Timeline';
+import './style.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const timelineBlockEls = document.querySelectorAll('.wp-block-tlgb-b-timeline-block');
@@ -10,8 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		const attributes = JSON.parse(timelineBlockEl.dataset.attributes);
 
 		createRoot(timelineBlockEl).render(<>
-			<Styles attributes={attributes} id={timelineBlockEl.id} />
-
 			<Timeline attributes={attributes} id={timelineBlockEl.id} />
 		</>);
 
