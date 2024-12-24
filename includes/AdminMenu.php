@@ -32,7 +32,7 @@ if (!class_exists('ACHBAdminMenu')) {
     {
 
       ?>
-      <div id="bplAdminHelpPage" data-version="<?php echo esc_attr(TLGB_VERSION); ?>">
+      <div id="bplAdminHelpPage" data-version="<?php echo esc_attr(TLGB_VERSION); ?>"  data-is-premium='<?php echo esc_attr(tlgbIsPremium()); ?>'>
        
       </div>
       <?php
@@ -45,6 +45,7 @@ if (!class_exists('ACHBAdminMenu')) {
         wp_enqueue_script('tlgb-admin-help', TLGB_DIR_URL . 'build/admin-help.js', ['react', 'react-dom'], TLGB_VERSION);
         // Enqueue the fontAwesome CSS
         wp_enqueue_style('timelineCSS', TLGB_DIR_URL . 'assets/css/font-awesome.min.css', [], TLGB_VERSION);
+        wp_enqueue_script('fs', TLGB_DIR_URL . 'assets/js/fs.js', [], '1');
         wp_set_script_translations('tlgb-admin-help', 'timeline-block', TLGB_DIR_PATH . 'languages');
       }
     }

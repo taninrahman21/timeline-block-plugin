@@ -179,6 +179,11 @@
           }
         }
       }
+
+      // Premium Section
+      .premium-section {
+        padding: 20px;
+      }
     }
 
     // Support CSS
@@ -319,7 +324,7 @@
         color: #666;
         cursor: pointer;
         transition: all 0.3s ease;
-        
+
         &:hover {
           background-color: #f0f0f0;
           color: #333;

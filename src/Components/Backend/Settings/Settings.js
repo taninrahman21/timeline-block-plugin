@@ -79,18 +79,12 @@ const Settings = ({ attributes, setAttributes, activeIndex, setActiveIndex, upda
     </BlockControls>
 
     <AboutProModal isProModalOpen={isProModalOpen} setIsProModalOpen={setIsProModalOpen} link='https://bplugins.com/products/advance-custom-html/#pricing'>
-      <li>&emsp;<strong>{__('Embed The Code: ', 'custom-html')}</strong>{__('Embed the code to frontend.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Set Editor Height and Width: ', 'custom-html')}</strong>{__('By adding this feature you can customize height and width of the editor.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Edit Tab Size: ', 'custom-html')}</strong>{__('Increase tab size.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Change Editor Theme: ', 'custom-html')}</strong>{__('There have 45 themes that you can change.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Different language for syntax: ', 'custom-html')}</strong>{__('Change language for different language syntax.', 'custom - html')}</li>
-      <li>&emsp;<strong>{__('Display Heading: ', 'custom-html')}</strong>{__('Display heading and edit this a very beautiful way.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Display copy button: ', 'custom-html')}</strong>{__('Display copy button for copy the code by one click and set position and you change its type like text of icon and style this.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Line numbers: ', 'custom-html')}</strong>{__('Show/hide line numbers with your need.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Highlight active line: ', 'custom-html')}</strong>{__('Show/hide highlight active line.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Fold Gutter: ', 'custom-html')}</strong>{__('Enable/disable fold gutter option.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Enable Autocompletion: ', 'custom-html')}</strong>{__('Off/on autocompletion.', 'custom-html')}</li>
-      <li>&emsp;<strong>{__('Wrap Enabled: ', 'custom-html')}</strong>{__('Enable wrap system.', 'custom-html')}</li>
+      <li>&emsp;<strong>{__('Added 2 Beautiful Themes: ', 'custom-html')}</strong>{__('Extend your plugin with these 2 themes. By using this timeline you can create a lot of themes.', 'timeline-block')}</li>
+      <li>&emsp;<strong>{__('Horizontal / Vertical Option in every themes: ', 'timeline-block')}</strong>{__("Customize your timeline like horizontal or vertical in every theme as a option. It's easy and beautiful to customize.", 'timeline-block')}</li>
+      <li>&emsp;<strong>{__('Added Classic Editor: ', 'timeline-block')}</strong>{__('As Timeline content you can use classic editor. You can add image and edit your content on your own.', 'timeline-block')}</li>
+      <li>&emsp;<strong>{__('Add Icon to your every story: ', 'timeline-block')}</strong>{__('Add and edit your story icon on your own.', 'timeline-block')}</li>
+      <li>&emsp;<strong>{__('Change Icon and Story Date Position: ', 'timeline-block')}</strong>{__('Change language for different language syntax.', 'custom - html')}</li>
+      <li>&emsp;<strong>{__('Change Icon and Story Date Position: ', 'timeline-block')}</strong>{__("You can change icon position when you're on horizontal timeline", 'timeline-block')}</li>
     </AboutProModal>
   </>;
 };

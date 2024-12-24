@@ -3,11 +3,11 @@ import { __ } from '@wordpress/i18n';
 import { produce } from 'immer';
 import { useEffect, useState } from 'react';
 
-import { usePremiumInEditor } from '../../../../bpl-tools/hooks';
 import { timelineConfig } from '../../utils/config';
 import Settings from '../Backend/Settings/Settings';
 import Styles from '../Common/Styles';
 import Theme2 from './Themes/Theme2';
+import { usePremiumInEditor } from '../../../../bpl-tools/hooks';
 
 const Edit = props => {
 	const { className, attributes, setAttributes, clientId } = props;

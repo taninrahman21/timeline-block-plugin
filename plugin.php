@@ -66,10 +66,10 @@ if (function_exists('tb_fs')) {
           'has_paid_plans' => true,
           'menu' => array(
             'slug' => 'timeline-block',
+            'first-path' => 'tools.php?page=timeline-block#/dashboard',
             'support' => false,
             'parent' => array(
               'slug' => 'tools.php',
-              'first-slug' => 'tools.php?page=timeline-block#/dashboard'
             ),
           )
         ];

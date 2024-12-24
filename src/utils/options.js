@@ -44,9 +44,9 @@ export const proFeatures = [
 			"Customize your timeline like horizontal or vertical in every theme as a option. It's easy and beautiful to customize."
 	},
 	{
-		name: "Added Tiny Editor",
+		name: "Added Classic Editor",
 		description:
-			"As Timeline content you can use tiny editor. You can add image and edit your content on your own."
+			"As Timeline content you can use classic editor. You can add image and edit your content on your own."
 	},
 	{
 		name: "Add Icon to your every story.",

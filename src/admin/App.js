@@ -6,7 +6,7 @@ import Support from './Pages/Support';
 
 
 
-const App = ({ version }) => {
+const App = ({ version, isPremium }) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const App = ({ version }) => {
     <>
       <Toaster position="bottom-center" />
       <Routes>
-        <Route path="/dashboard" element={<Dashboard version={version} />} />
+        <Route path="/dashboard" element={<Dashboard version={version} isPremium={isPremium} />} />
         <Route path="/support" element={<Support />} />
 
         {/* When no routes match, it will redirect to this route path. Note that it should be registered above. */}

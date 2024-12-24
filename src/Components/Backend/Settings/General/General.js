@@ -60,7 +60,7 @@ const General = ({ attributes, setAttributes, removeTimeline, activeIndex, addTi
           {/* Add Photos and Other Stuff */}
           <BControlPro
             className='mt10'
-            label={__('Add Tiny Editor For Description', 'custom-html')}
+            label={__('Add Classic Editor For Description', 'custom-html')}
             checked={isAddTinyEditor}
             onChange={isAddTinyEditor => updateTimeline(activeIndex, 'isAddTinyEditor', isAddTinyEditor)}
             Component={ToggleControl}

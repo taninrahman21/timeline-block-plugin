@@ -8,14 +8,14 @@ const UpgradeBtn = () => {
 
     // eslint-disable-next-line no-undef
     const checkoutConfig = new FS.Checkout({
-      product_id: 17174,
-      plan_id: 28639,
-      public_key: 'pk_51f816736288458da2dd37c719fd3',
-      image: 'https://ps.w.org/icon-list-block/assets/icon-128x128.png?rev=2697392',
+      product_id: '17342',
+      plan_id: '28900',
+      public_key: 'pk_624005a9d0c56ff46db6602f5f730',
+      image: 'https://ibb.co.com/tBpcmwC'
     });
 
     checkoutConfig.open({
-      title: 'Icon List Block Pro',
+      title: 'Timeline Block Pro',
       licenses: 1,
       // You can consume the response for after purchase logic.
       // eslint-disable-next-line no-unused-vars

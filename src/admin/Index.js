@@ -6,10 +6,10 @@ import { HashRouter } from 'react-router-dom';
  */
 import App from './App';
 
-const AppContainer = ({version}) => {
+const AppContainer = ({version, isPremium}) => {
   return (
     <HashRouter>
-      <App version={version} />
+      <App version={version} isPremium={isPremium} />
     </HashRouter>
   );
 }

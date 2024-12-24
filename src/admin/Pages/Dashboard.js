@@ -4,12 +4,13 @@ import defaultImage from '../../../assets/images/demoTimeline/defaultVertical.pn
 import defaultVerticalImage from '../../../assets/images/demoTimeline/defautlVerticalImage.png';
 import imageHorizontalTimeline from '../../../assets/images/demoTimeline/ImageTimelineHorizontalBottom.png';
 import imageTimelineVerticalBoth from '../../../assets/images/demoTimeline/imageTimelineVertcalBoth.png';
-import { FiCornerLeftDown, FaList } from '../../utils/icons';
-import { proFeatures } from '../../utils/options';
+import { FaList, FiCornerLeftDown } from '../../utils/icons';
+import premiumImage from '../../../assets/images/demoTimeline/premiumImage.png'
 import Layout from '../Layout/Layout';
 import UpgradeBtn from './UpgradeBtn';
+import { proFeatures } from '../../utils/options';
 
-const Dashboard = ({ version }) => {
+const Dashboard = ({ version, isPremium }) => {
   const [theme, setTheme] = useState('default');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [clickedImage, setClickedImage] = useState(null);
@@ -51,95 +52,113 @@ const Dashboard = ({ version }) => {
   return (
     <Layout version={version}>
       <div className="feature-section">
-        {/* Demo Section */}
-        <div className='tab-section'>
-          <div className='dashboard-header-main-section'>
-            <div className="dashboard-header-section">
-              <h1>Thank you for installing the <span className='blockName'>Timeline Block Plugin!</span></h1>
-              <div className='premium-head'>
-                <FiCornerLeftDown className="leftDownIcon" />
-                <h3>Check out some of our amazing premium themes below.</h3>
-              </div>
-            </div>
-            <div>
-              <UpgradeBtn />
-            </div>
-          </div>
-          <div className="tab-container">
-            <nav className="tabs">
-              <h2 className='ul-head'>Amazing themes:</h2>
-              <ul className="tab-list">
-                {tabs.map(tab => (
-                  <li
-                    key={tab.id}
-                    className={`tab-item ${theme === tab.id ? 'active' : ''}`}
-                    onClick={() => setTheme(tab.id)}
-                  >
-                    <div className="tab-content">
-                      {tab.icon}
-                      <span className="tab-label">{tab.label}</span>
-                      {tab.isPro && <span className="pro-badge">Pro</span>}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            <main className="content">
-              {/* Render the dynamic theme content */}
-              {
-                tabContents.map((tabContent, index) => (
-                  theme === tabContent.name && (
-                    <div key={index} className="theme-content">
-                      {tabContent.images.map((image, imgIndex) => (
-                        <div key={imgIndex}>
-                          <h2>{image.header}</h2>
-                          {/* Pass the image URL to openModal */}
-                          <img onClick={() => openModal(image.image)} src={image.image} alt={image.header} />
-                        </div>
-                      ))}
-                    </div>
-                  )
-                ))
-              }
+        {
+          isPremium ? (
+            <>
+              <div className='premium-section'>
+                <div className='premium-header'>
+                  <h1>🎉 Thank you for installing the Premium Version Timeline Block Plugin!</h1>
+                </div>
+                <div className='premium-image'>
+                  <img src={premiumImage} alt="" />
+                </div>
 
-              {isModalOpen && (
-                <div className="modal-overlay" onClick={closeModal}>
-                  <div className="modal-content" style={{ backgroundImage: `url(${clickedImage})` }} onClick={(e) => e.stopPropagation()}>
-                    <button className="close-button" onClick={closeModal}>×</button>
+              </div>
+            </>
+          ) : (
+            <>
+                {/* Demo Section */}
+                <div className='tab-section'>
+                  <div className='dashboard-header-main-section'>
+                    <div className="dashboard-header-section">
+                      <h1>Thank you for installing the <span className='blockName'>Timeline Block Plugin!</span></h1>
+                      <div className='premium-head'>
+                        <FiCornerLeftDown className="leftDownIcon" />
+                        <h3>Check out some of our amazing premium themes below.</h3>
+                      </div>
+                    </div>
+                    <div>
+                      <UpgradeBtn />
+                    </div>
+                  </div>
+                  <div className="tab-container">
+                    <nav className="tabs">
+                      <h2 className='ul-head'>Amazing themes:</h2>
+                      <ul className="tab-list">
+                        {tabs.map(tab => (
+                          <li
+                            key={tab.id}
+                            className={`tab-item ${theme === tab.id ? 'active' : ''}`}
+                            onClick={() => setTheme(tab.id)}
+                          >
+                            <div className="tab-content">
+                              {tab.icon}
+                              <span className="tab-label">{tab.label}</span>
+                              {tab.isPro && <span className="pro-badge">Pro</span>}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </nav>
+                    <main className="content">
+                      {/* Render the dynamic theme content */}
+                      {
+                        tabContents.map((tabContent, index) => (
+                          theme === tabContent.name && (
+                            <div key={index} className="theme-content">
+                              {tabContent.images.map((image, imgIndex) => (
+                                <div key={imgIndex}>
+                                  <h2>{image.header}</h2>
+                                  {/* Pass the image URL to openModal */}
+                                  <img onClick={() => openModal(image.image)} src={image.image} alt={image.header} />
+                                </div>
+                              ))}
+                            </div>
+                          )
+                        ))
+                      }
+
+                      {isModalOpen && (
+                        <div className="modal-overlay" onClick={closeModal}>
+                          <div className="modal-content" style={{ backgroundImage: `url(${clickedImage})` }} onClick={(e) => e.stopPropagation()}>
+                            <button className="close-button" onClick={closeModal}>×</button>
+                          </div>
+                        </div>
+                      )}
+                    </main>
                   </div>
                 </div>
-              )}
-            </main>
-          </div>
-        </div>
 
-        {/* Pro features */}
-        <div className="feature-container">
-          <div className="feature-grid">
-            <div className="feature-content">
-              <p className="section-heading">Awesome Premium Features</p>
-              <p className="section-description">
-                Expand your plugin with some awesome some premium features that will give you a better experience.
-              </p>
+                {/* Pro features */}
+                <div className="feature-container">
+                  <div className="feature-grid">
+                    <div className="feature-content">
+                      <p className="section-heading">Awesome Premium Features</p>
+                      <p className="section-description">
+                        Expand your plugin with some awesome some premium features that will give you a better experience.
+                      </p>
 
-              {/* Premium Feature List */}
-              <div className="feature-list">
-                {proFeatures.map((feature) => (
-                  <div key={feature.name} className="feature-item">
-                    <div className="feature-name">
-                      {feature.name}
+                      {/* Premium Feature List */}
+                      <div className="feature-list">
+                        {proFeatures.map((feature) => (
+                          <div key={feature.name} className="feature-item">
+                            <div className="feature-name">
+                              {feature.name}
+                            </div>
+                            <div className="feature-description">{feature.description}</div>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="upgrade-btn">
+                        <UpgradeBtn />
+                      </div>
                     </div>
-                    <div className="feature-description">{feature.description}</div>
                   </div>
-                ))}
-              </div>
-
-              <div className="upgrade-btn">
-                <UpgradeBtn />
-              </div>
-            </div>
-          </div>
-        </div>
+                </div>
+            </>
+          )
+        }
       </div>
     </Layout>
   );
